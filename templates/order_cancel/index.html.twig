@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Erreur de paiment - Shopingo{% endblock %}
+
+{% block content %}
+    <h2>Erreur de paiment </h2>
+    <p>
+        Bonjour <strong>{{ order.user.firstname }} {{ order.user.lastname }}</strong>,<br><br>
+        Il semblerait que votre paiement est échoué pour votre commande n°<strong>{{ order.reference }}</strong>.<br>
+        Une confirmation d'erreur vient de vous être envoyée par email à l'adresse <strong>{{ order.user.email }}</strong>
+    </p>
+    <a href="{{ path('app_order') }}">Réessayer le paiement</a>
+{% endblock %}

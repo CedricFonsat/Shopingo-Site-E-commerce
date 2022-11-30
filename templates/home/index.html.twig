@@ -1,0 +1,60 @@
+{% extends 'base.html.twig' %}
+
+{% block carousel %}{% endblock %}
+
+{% block content %}
+    <!-- Three columns of text below the carousel -->
+    <h3>Nos meilleurs ventes</h3>
+    <p>Découvrez les articles les plus vendues.</p>
+        <div class="row">
+            {% for product in products %}
+                <div class="col-md-3">
+                    {% include 'product/single_product.html.twig' %}
+                </div><!-- /.col-lg-4 -->
+            {% endfor %}
+        </div><!-- /.row -->
+
+
+        <!-- START THE FEATURETTES -->
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+            <div class="col-md-7">
+                <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It’ll blow your mind.</span></h2>
+                <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+            </div>
+            <div class="col-md-5">
+                <img class="img-fluid" src="https://les-ingeniaux.com/wp-content/uploads/2019/01/ai-artificial-intelligence-blur-546819.jpg" alt="">
+            </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+            <div class="col-md-7 order-md-2">
+                <h2 class="featurette-heading">Oh yeah, it’s that good. <span class="text-muted">See for yourself.</span></h2>
+                <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+            </div>
+            <div class="col-md-5 order-md-1">
+                <img class="img-fluid" src="https://www.mydigitalschool.com/sites/default/files/styles/actu_detail/public/2022-05/vignette%20DigiActu%20d%C3%A9veloppeur%20web.jpg.webp?itok=EvcINDtp" alt="">
+               </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+            <div class="col-md-7">
+                <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
+                <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+            </div>
+            <div class="col-md-5">
+                <img class="img-fluid" src="https://img.freepik.com/vecteurs-premium/ordinateur-portable-realiste-code-ecran-fond-degrade-bleu-concept-pour-developpeur-web-design-programmation-illustration-vectorielle_163786-763.jpg?w=2000" alt="">
+               </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <!-- /END THE FEATURETTES -->
+
+{% endblock %}
